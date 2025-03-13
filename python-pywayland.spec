@@ -9,7 +9,7 @@ Source:         https://files.pythonhosted.org/packages/source/p/pywayland/pyway
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(python3)
-BuildSystem: Python
+BuildSystem:    python
 
 %description
 PyWayland provides a wrapper to the libwayland library using the CFFI library

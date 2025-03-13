@@ -21,3 +21,5 @@ to provide access to the Wayland library calls and written in pure Python.}
 %license LICENSE
 %doc README.rst
 %{_bindir}/pywayland-scanner
+%{python_sitelib}/pywayland-%{version}.dist-info
+%{python_sitelib}/pywayland/

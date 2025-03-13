@@ -1,3 +1,4 @@
+%undefine _debugsource_packages
 Name:           python-pywayland
 Version:        0.4.18
 Release:        1

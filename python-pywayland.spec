@@ -10,6 +10,8 @@ Source:         https://files.pythonhosted.org/packages/source/p/pywayland/pyway
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pip)
 BuildSystem:    python
 
 %description

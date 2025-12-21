@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 Name:           python-pywayland
 Version:        0.4.18
-Release:        2
+Release:        3
 Summary:        Python bindings for the libwayland library written in pure Python
 License:        Apache-2.0 AND ISC AND NTP
 URL:            https://github.com/flacjacket/pywayland/
@@ -10,14 +10,24 @@ Source:         https://files.pythonhosted.org/packages/source/p/pywayland/pyway
 BuildRequires:  pkgconfig(wayland-client)
 BuildRequires:  pkgconfig(wayland-protocols)
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3
 BuildRequires:  python%{pyver}dist(setuptools)
 BuildRequires:  python%{pyver}dist(pip)
-BuildSystem:    python
 
 %description
 PyWayland provides a wrapper to the libwayland library using the CFFI library
 to provide access to the Wayland library calls and written in pure Python.}
 
+%prep
+%autosetup -p1
+
+%build
+%python3 pywayland/ffi_build.py
+	
+%python3 -m pywayland.scanner --with-protocols
+
+%install
+%py_install
 
 %files
 %license LICENSE

@@ -19,7 +19,7 @@ PyWayland provides a wrapper to the libwayland library using the CFFI library
 to provide access to the Wayland library calls and written in pure Python.}
 
 %prep
-%autosetup -p1
+%autosetup -n pywayland-%{version} -p1
 
 %build
 %python3 pywayland/ffi_build.py

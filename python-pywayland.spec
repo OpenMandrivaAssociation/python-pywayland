@@ -26,8 +26,8 @@ to provide access to the Wayland library calls and written in pure Python.}
 %build
 cd pywayland
 python ffi_build.py
-	
-%python3 -m pywayland.scanner --with-protocols
+cd ..
+python -m pywayland.scanner --with-protocols
 
 %install
 %py_install

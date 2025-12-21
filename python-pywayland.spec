@@ -38,5 +38,5 @@ python -m pywayland.scanner --with-protocols
 %license LICENSE
 %doc README.rst
 %{_bindir}/pywayland-scanner
-#{python_sitelib}/pywayland-%{version}.dist-info
-#{python_sitelib}/pywayland/
+%{python_sitearch}/pywayland-%{version}.dist-info
+%{python_sitearch}/pywayland/

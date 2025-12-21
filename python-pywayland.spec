@@ -13,6 +13,8 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3
 BuildRequires:  python%{pyver}dist(setuptools)
 BuildRequires:  python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(cffi)
+Requires:		python%{pyver}dist(cffi)
 
 %description
 PyWayland provides a wrapper to the libwayland library using the CFFI library
@@ -22,7 +24,7 @@ to provide access to the Wayland library calls and written in pure Python.}
 %autosetup -n pywayland-%{version} -p1
 
 %build
-%python3 pywayland/ffi_build.py
+python pywaland/ffi_build.py
 	
 %python3 -m pywayland.scanner --with-protocols
 

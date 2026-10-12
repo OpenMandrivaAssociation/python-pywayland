@@ -1,9 +1,10 @@
 %undefine _debugsource_packages
 Name:           python-pywayland
-Version:        0.4.18
-Release:        3
+Version:        0.4.19
+Release:        1
 Summary:        Python bindings for the libwayland library written in pure Python
 License:        Apache-2.0 AND ISC AND NTP
+Group:        Development/Python
 URL:            https://github.com/flacjacket/pywayland/
 Source:         https://files.pythonhosted.org/packages/source/p/pywayland/pywayland-%{version}.tar.gz
 
